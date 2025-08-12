@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Task Planner</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Smart Task Planner</h1>
+    <form id="taskForm">
+      <input type="text" id="taskInput" placeholder="Enter your task..." required />
+      <input type="date" id="taskDate" required />
+      <input type="time" id="taskTime" required />
+      <button type="submit">Add Task</button>
+    </form>
+
+   
+    <div class="filter-buttons">
+      <button onclick="setFilter('all')">All</button>
+      <button onclick="setFilter('completed')">Completed</button>
+      <button onclick="setFilter('incomplete')">Incomplete</button>
+    </div>
+
+    <ul id="taskList"></ul>
+  </div>
+
+  
+  <audio id="reminderSound" src="https://www.soundjay.com/buttons/beep-07.wav" preload="auto"></audio>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
+
